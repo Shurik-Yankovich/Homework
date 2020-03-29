@@ -27,7 +27,9 @@ public class Main {
                     characterCount.symbolCount();
                     break;
                 case 3:
-                    System.out.println("Здесь скоро что-то будет!)");
+                    Poker poker = new Poker();
+                    poker.distributionOfCards();
+                    poker.showCard();
                     break;
                 case 4:
                     System.out.println("Спасибо что выбрали нашу программу!)");

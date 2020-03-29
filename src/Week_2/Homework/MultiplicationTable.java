@@ -21,7 +21,7 @@ public class MultiplicationTable {
     }
 
     private static void tableHeader() {
-        System.out.print(" |  ");
+        System.out.print("\n |  ");
         for (int i = 1; i <= 9; i++)
             System.out.print(i + "  ");
         System.out.println("\n ----------------------------");

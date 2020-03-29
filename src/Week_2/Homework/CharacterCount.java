@@ -14,12 +14,12 @@ public class CharacterCount {
         initializationText();
         initializationSymbol();
         countCharacterInText();
-        System.out.println("В тексте найдено " + count + " символов: [" + symbol + "]");
+        System.out.println("В тексте найдено " + count + " символов: [" + symbol + "]\n");
     }
 
     private void initializationText() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите текст для поиска:");
+        System.out.println("\nВведите текст для поиска:");
         text = scan.nextLine();
     }
 
