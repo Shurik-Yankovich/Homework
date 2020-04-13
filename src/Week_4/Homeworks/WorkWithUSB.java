@@ -1,26 +1,26 @@
-package Week_3.Week_4.Lectures;
+package Week_4.Homeworks;
 
 public class WorkWithUSB {
 
     public static void main(String[] args) {
         Computer computer = new Computer();
         Computer.USBInterface usbInterface = computer.new USBInterface();
-        USBData usbData1 = new USBData();
-        USBData usbData2 = new USBData();
+        Drive usbDrive = new USBDrive();
+        Drive hardDiskDrive = new HardDiskDrive();
 
-        usbInterface.putIn(usbData1);
-        if (!computer.writeData(usbData1))
+        usbInterface.putIn(usbDrive);
+        if (!computer.writeData(usbDrive))
             System.out.println("Ошибка записи данных! Вставьте флешку в компьютер!");
-        if (!computer.printData(usbData1))
+        if (!computer.printData(usbDrive))
             System.out.println("Ошибка записи данных! Вставьте флешку в компьютер!");
 
-        usbInterface.putIn(usbData2);
-        usbInterface.putOut(usbData1);
-        usbInterface.putIn(usbData2);
-        if (!computer.writeData(usbData2))
+        usbInterface.putIn(hardDiskDrive);
+        usbInterface.putOut(usbDrive);
+        usbInterface.putIn(hardDiskDrive);
+        if (!computer.writeData(hardDiskDrive))
             System.out.println("Ошибка записи данных! Вставьте флешку в компьютер!");
-        if (!computer.printData(usbData2))
+        if (!computer.printData(hardDiskDrive))
             System.out.println("Ошибка записи данных! Вставьте флешку в компьютер!");
-        usbInterface.putOut(usbData2);
+        usbInterface.putOut(hardDiskDrive);
     }
 }

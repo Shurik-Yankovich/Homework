@@ -1,4 +1,4 @@
-package Week_3.Week_4.Lectures.interfeices;
+package Week_4.Lectures.interfeices;
 
 public class Computer implements Playable {
     @Override

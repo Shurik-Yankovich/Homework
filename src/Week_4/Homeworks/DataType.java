@@ -1,4 +1,4 @@
-package Week_3.Week_4.Lectures;
+package Week_4.Homeworks;
 
 public enum DataType {
 
