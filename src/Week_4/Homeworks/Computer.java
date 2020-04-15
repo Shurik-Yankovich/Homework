@@ -6,7 +6,7 @@ public class Computer {
 
     private boolean status = false;
 
-    public boolean printData(Drive drive){
+    public <T extends Drive> boolean readData(T drive){
         boolean result;
         if (status ) {
             result = drive.read();
@@ -16,7 +16,7 @@ public class Computer {
         return result;
     }
 
-    public boolean writeData(Drive drive) {
+    public <T extends Drive> boolean writeData(T drive) {
         boolean result;
         if (status) {
             Scanner scanner = new Scanner(System.in);

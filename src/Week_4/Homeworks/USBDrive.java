@@ -1,6 +1,6 @@
 package Week_4.Homeworks;
 
-public class USBDrive implements Drive{
+public class USBDrive implements Drive {
 
     private String data;
     public DataType dataType;
