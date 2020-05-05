@@ -61,14 +61,14 @@ public class Sportloto {
 
     public void playGame() {
         for (Participant participant : participants) {
-            if (abrakasyabra(participant.getNumbersOnTheTicket()))
+            if (arrayInWinningCombination(participant.getNumbersOnTheTicket()))
                 participant.setWinner(true);
             else
                 participant.setWinner(false);
         }
     }
 
-    private boolean abrakasyabra (int[] array) {
+    private boolean arrayInWinningCombination(int[] array) {
         int result = 0;
         for (int arrayNumber : array) {
             for (int number : winningCombination) {
