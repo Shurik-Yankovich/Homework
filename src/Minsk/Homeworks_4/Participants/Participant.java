@@ -6,11 +6,14 @@ public class Participant {
 
     private String playerName;
     private int[] numbersOnTheTicket;
-    private boolean selected = false;
+    private boolean selected;
+    private boolean winner;
     private static final int countOfNumbers = 3;
 
-    public void setPlayerName(int playerNumber) {
-        this.playerName = "Игрок " + playerNumber;
+    public Participant(int playerNumber) {
+        playerName = "Игрок " + playerNumber;
+        selected = false;
+        winner = false;
     }
 
     public void setNumbersOnTheTicket() {
@@ -19,6 +22,10 @@ public class Participant {
 
     public void setSelected(boolean selected) {
         this.selected = selected;
+    }
+
+    public void setWinner(boolean winner) {
+        this.winner = winner;
     }
 
     public String getPlayerName() {
@@ -31,5 +38,9 @@ public class Participant {
 
     public boolean isSelected() {
         return selected;
+    }
+
+    public boolean isWinner() {
+        return winner;
     }
 }

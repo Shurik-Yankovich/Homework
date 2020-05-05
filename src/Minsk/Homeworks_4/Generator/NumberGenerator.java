@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class NumberGenerator {
 
+    private static final Random random = new Random(System.currentTimeMillis());
+
     public static int[] randomNumbersGenerator(int countOfNumbers) {
         int[] numbers = new int[countOfNumbers];
         int number;
         int i = 0;
-        Random random = new Random(System.currentTimeMillis());
 
         do {
             number = 1 + random.nextInt(49);
