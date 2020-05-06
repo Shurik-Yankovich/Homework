@@ -4,8 +4,6 @@ import Minsk.Homeworks_4.Generator.NumberGenerator;
 import Minsk.Homeworks_4.Participants.Participant;
 import Minsk.Homeworks_4.Participants.ParticipantFactory;
 
-import java.util.Scanner;
-
 public class Sportloto {
 
     private int[] winningCombination;
