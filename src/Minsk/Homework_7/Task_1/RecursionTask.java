@@ -1,10 +1,12 @@
 package Minsk.Homework_7.Task_1;
 
+//Дано натуральное число N. Нужно с помощью рекурсивного метода вывести в консоль числа от 0 до N.
+
 import java.util.Scanner;
 
 public class RecursionTask {
 
-    public static final int FIRST_NUMBER = 0;
+    private static final int FIRST_NUMBER = 0;
 
     public static void main(String[] args) {
         int number;
@@ -15,7 +17,7 @@ public class RecursionTask {
         recursionPrintNumbers(FIRST_NUMBER, number);
     }
 
-    public static void recursionPrintNumbers(int firstNumber, int lastNumber) {
+    private static void recursionPrintNumbers(int firstNumber, int lastNumber) {
         if (firstNumber < lastNumber) {
             System.out.println(firstNumber);
             recursionPrintNumbers(firstNumber + 1, lastNumber);
