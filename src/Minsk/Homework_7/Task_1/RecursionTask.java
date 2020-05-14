@@ -2,6 +2,7 @@ package Minsk.Homework_7.Task_1;
 
 //Дано натуральное число N. Нужно с помощью рекурсивного метода вывести в консоль числа от 0 до N.
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class RecursionTask {
@@ -13,8 +14,13 @@ public class RecursionTask {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите натуральное число:");
-        number = scanner.nextInt();
-        recursionPrintNumbers(FIRST_NUMBER, number);
+        try {
+            number = scanner.nextInt();
+            recursionPrintNumbers(FIRST_NUMBER, number);
+        } catch (InputMismatchException e) {
+            System.out.println("Неверно введено число.");
+        }
+        scanner.close();
     }
 
     private static void recursionPrintNumbers(int firstNumber, int lastNumber) {

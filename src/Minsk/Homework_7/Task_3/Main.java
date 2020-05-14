@@ -4,6 +4,7 @@ package Minsk.Homework_7.Task_3;
 //Наборы сгенерированных чисел должны храниться в листах;
 //Также список всех сгенерированных игроков должен храниться в map и обращение к нему должно происходить по ключу (в качестве ключа можно использовать его порядковый номер);
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -12,15 +13,22 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Sportloto sportloto = new Sportloto();
 
-        System.out.println("Введите количество участников:");
-        sportloto.setParticipants(scanner.nextInt());
+        try {
+            System.out.println("Введите количество участников:");
+            sportloto.setParticipants(scanner.nextInt());
 
-        sportloto.printParticipants();
-        System.out.println("Выбирете участника из списка выше:");
-        sportloto.choiceOfParticipant(scanner.nextInt());
+            sportloto.printParticipants();
+            System.out.println("Выбирете участника из списка выше:");
+            sportloto.choiceOfParticipant(scanner.nextInt());
 
-        sportloto.setWinningCombination();
-        sportloto.playGame();
-        sportloto.isWinners();
+            sportloto.setWinningCombination();
+            sportloto.playGame();
+            sportloto.isWinners();
+        } catch (InputMismatchException e) {
+            System.out.println("Неверно введено количество участников!");
+        } catch (NullPointerException e) {
+            System.out.println("Неверно выбран номер игрока!");
+        }
+        scanner.close();
     }
 }

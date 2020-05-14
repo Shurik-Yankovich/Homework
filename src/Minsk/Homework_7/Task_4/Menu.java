@@ -42,5 +42,6 @@ public class Menu {
             default:
                 System.out.println("Неверно выбран пункт меню.");
         }
+        scanner.close();
     }
 }

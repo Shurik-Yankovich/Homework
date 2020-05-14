@@ -24,7 +24,7 @@ public class Sportloto {
         participants = ParticipantFactory.generatorParticipants(countParticipants);
     }
 
-    public void choiceOfParticipant(int number) {
+    public void choiceOfParticipant(int number) throws NullPointerException {
         participants.get(number).setSelected(true);
     }
 

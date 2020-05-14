@@ -40,6 +40,6 @@ public class Main {
         System.out.println(myList1);
         System.out.println(String.format("Четвертый элемент: %s", myList1.get(4)));
 
-
+        scanner.close();
     }
 }
