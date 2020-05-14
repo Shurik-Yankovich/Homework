@@ -18,5 +18,6 @@ public class Main {
         sportloto.setWinningCombination();
         sportloto.playGame();
         sportloto.isWinners();
+        scanner.close();
     }
 }
