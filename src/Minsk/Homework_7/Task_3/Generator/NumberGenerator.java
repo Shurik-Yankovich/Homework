@@ -24,8 +24,9 @@ public class NumberGenerator {
 
     private static boolean numberInArray (int number, List<Integer> array) {
         for (int arrayNumber : array) {
-            if (number == arrayNumber)
+            if (number == arrayNumber) {
                 return true;
+            }
         }
         return false;
     }

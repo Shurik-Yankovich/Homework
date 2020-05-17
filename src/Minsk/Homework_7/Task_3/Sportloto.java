@@ -9,11 +9,13 @@ import java.util.Map;
 
 public class Sportloto {
 
+    private static final int COUNT_OF_NUMBERS = 6;
+    private static final String PLAYER_NAME = "Игрок %d";
+
     private List<Integer> winningCombination;
     private Map<Integer, Participant> participants;
 
-    private static final int COUNT_OF_NUMBERS = 6;
-    private static final String PLAYER_NAME = "Игрок %d";
+
 
     public void setWinningCombination() {
         winningCombination = NumberGenerator.randomNumbersGenerator(COUNT_OF_NUMBERS);
@@ -36,10 +38,7 @@ public class Sportloto {
 
     public void playGame() {
         for (int i = 1; i <= participants.size(); i++) {
-            if (arrayInWinningCombination(participants.get(i).getNumbersOnTheTicket()))
-                participants.get(i).setWinner(true);
-            else
-                participants.get(i).setWinner(false);
+            participants.get(i).setWinner(arrayInWinningCombination(participants.get(i).getNumbersOnTheTicket()));
         }
     }
 
@@ -60,23 +59,26 @@ public class Sportloto {
         boolean winner = false;
         int result = 0;
 
-        System.out.println("Выйграли следущие участники:");
+        System.out.println("Победили следущие участники:");
         for (int i = 1; i <= participants.size(); i++) {
             if (participants.get(i).isWinner()) {
                 System.out.println(String.format(PLAYER_NAME, i));
-                if (participants.get(i).isSelected())
+                if (participants.get(i).isSelected()) {
                     winner = true;
+                }
                 result++;
             }
         }
 
-        if (result == 0)
-            System.out.println("Никто не выйграл!");
+        if (result == 0) {
+            System.out.println("Никто не победил!");
+        }
 
-        if (winner)
-            System.out.println("Вы выйграли!");
-        else
+        if (winner) {
+            System.out.println("Вы выиграли!");
+        } else {
             System.out.println("Вы проиграли!");
+        }
     }
 
 }

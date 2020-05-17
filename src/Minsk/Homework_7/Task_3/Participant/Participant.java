@@ -9,15 +9,14 @@ public class Participant {
     private List<Integer> numbersOnTheTicket;
     private boolean selected;
     private boolean winner;
-    private static final int countOfNumbers = 3;
 
     public Participant() {
         selected = false;
         winner = false;
     }
 
-    public void setNumbersOnTheTicket() {
-        this.numbersOnTheTicket = NumberGenerator.randomNumbersGenerator(countOfNumbers);
+    public void setNumbersOnTheTicket(List<Integer> numbersOnTheTicket) {
+        this.numbersOnTheTicket = numbersOnTheTicket;
     }
 
     public void setSelected(boolean selected) {

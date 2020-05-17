@@ -11,10 +11,7 @@ public class MyList<T> {
             head.setValue(newElement);
             countElements = 1;
         } else {
-            Node<T> node = head;
-            while (node.getNextNode() != null) {
-                node = node.getNextNode();
-            }
+            Node<T> node = getLastElement();
             node.setNextNode(new Node<T>());
             node.getNextNode().setValue(newElement);
             countElements++;
@@ -40,17 +37,31 @@ public class MyList<T> {
 
     @Override
     public String toString() {
-        String text = "[";
+        String text;
         if (head == null) {
-            text += "Список пуст";
+            text = "Список пуст";
         } else {
-            Node<T> node = head;
-            while (node.getNextNode() != null) {
-                text += node.getValue() + ", ";
-                node = node.getNextNode();
-            }
-            text += node.getValue() + "]";
+            text = toStringAllElements();
         }
+        return text;
+    }
+
+    private Node<T> getLastElement() {
+        Node<T> node = head;
+        while (node.getNextNode() != null) {
+            node = node.getNextNode();
+        }
+        return node;
+    }
+
+    private String toStringAllElements() {
+        Node<T> node = head;
+        String text = "[";
+        while (node.getNextNode() != null) {
+            text += node.getValue() + ", ";
+            node = node.getNextNode();
+        }
+        text += node.getValue() + "]";
         return text;
     }
 }
