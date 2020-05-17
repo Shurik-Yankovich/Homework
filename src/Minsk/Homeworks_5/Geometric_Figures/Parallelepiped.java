@@ -45,4 +45,9 @@ public class Parallelepiped extends Figure {
     public void setHeight(double height) {
         this.height = height;
     }
+
+    @Override
+    public void printName() {
+        System.out.println("Это параллелепипед!");
+    }
 }

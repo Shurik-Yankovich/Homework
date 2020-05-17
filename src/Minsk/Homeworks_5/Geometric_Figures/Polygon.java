@@ -15,4 +15,9 @@ public class Polygon extends Figure{
     public void setCountCorners(int countCorners) {
         this.countCorners = countCorners;
     }
+
+    @Override
+    public void printName() {
+        System.out.println("Это многоугольник!");
+    }
 }

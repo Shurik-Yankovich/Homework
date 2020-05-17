@@ -27,8 +27,4 @@ public class PassengerCar extends Car {
         this.power = power;
     }
 
-    @Override
-    public void aboutCar() {
-        System.out.println("\"" + super.getName() + "\" " + super.getYear() + " года с вместимостью " + capacity + " человек и мощностью " + power + " л.с.");
-    }
 }

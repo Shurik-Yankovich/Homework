@@ -27,8 +27,4 @@ public class TruckCar extends Car {
         this.maxVolume = maxVolume;
     }
 
-    @Override
-    public void aboutCar() {
-        System.out.println("\"" + super.getName() + "\" " + super.getYear() + " года с вместимостью груза весом " + maxWeight + "кг и объемом " + maxVolume + " куб.м.");
-    }
 }

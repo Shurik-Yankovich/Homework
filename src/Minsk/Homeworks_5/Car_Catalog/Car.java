@@ -26,7 +26,4 @@ public class Car {
         this.name = name;
     }
 
-    public void aboutCar(){
-        System.out.println(name + " " + year + " года.");
-    }
 }

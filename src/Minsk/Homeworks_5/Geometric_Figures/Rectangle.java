@@ -18,4 +18,9 @@ public class Rectangle extends Parallelogram {
     public void setLength(double length) {
         this.length = length;
     }
+
+    @Override
+    public void printName() {
+        System.out.println("Это прямоугольник!");
+    }
 }

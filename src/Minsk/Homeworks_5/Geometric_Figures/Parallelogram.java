@@ -16,4 +16,9 @@ public class Parallelogram extends Polygon{
     public void setCorner(double corner) {
         this.corner = corner;
     }
+
+    @Override
+    public void printName() {
+        System.out.println("Это параллелограм!");
+    }
 }

@@ -15,4 +15,9 @@ public class Sphere extends Figure {
     public void setRadius(double radius) {
         this.radius = radius;
     }
+
+    @Override
+    public void printName() {
+        System.out.println("Это сфера!");
+    }
 }
