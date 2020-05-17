@@ -6,9 +6,9 @@ import Minsk.Homeworks_4.Participants.ParticipantFactory;
 
 public class Sportloto {
 
+    private static final int countOfNumbers = 6;
     private int[] winningCombination;
     private Participant[] participants;
-    private static final int countOfNumbers = 6;
 
     public void setWinningCombination() {
         winningCombination = NumberGenerator.randomNumbersGenerator(countOfNumbers);
@@ -44,10 +44,11 @@ public class Sportloto {
 
     public void playGame() {
         for (Participant participant : participants) {
-            if (arrayInWinningCombination(participant.getNumbersOnTheTicket()))
-                participant.setWinner(true);
-            else
-                participant.setWinner(false);
+//            if (arrayInWinningCombination(participant.getNumbersOnTheTicket()))
+//                participant.setWinner(true);
+//            else
+//                participant.setWinner(false);
+            participant.setWinner(arrayInWinningCombination(participant.getNumbersOnTheTicket()));
         }
     }
 
@@ -68,7 +69,7 @@ public class Sportloto {
         boolean winner = false;
         int result = 0;
 
-        System.out.println("Выйграли следущие участники:");
+        System.out.println("Победили следущие участники:");
         for (Participant participant : participants) {
             if (participant.isWinner()) {
                 System.out.println(participant.getPlayerName());
@@ -79,10 +80,10 @@ public class Sportloto {
         }
 
         if (result == 0)
-            System.out.println("Никто не выйграл!");
+            System.out.println("Никто не победил!");
 
         if (winner)
-            System.out.println("Вы выйграли!");
+            System.out.println("Вы выиграли!");
         else
             System.out.println("Вы проиграли!");
     }

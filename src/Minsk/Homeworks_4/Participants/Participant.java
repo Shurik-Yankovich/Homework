@@ -4,11 +4,11 @@ import Minsk.Homeworks_4.Generator.NumberGenerator;
 
 public class Participant {
 
+    private static final int countOfNumbers = 3;
     private String playerName;
     private int[] numbersOnTheTicket;
     private boolean selected;
     private boolean winner;
-    private static final int countOfNumbers = 3;
 
     public Participant(int playerNumber) {
         playerName = "Игрок " + playerNumber;
