@@ -99,7 +99,7 @@ public class Menu {
         int choiceMainMenuAction;
         do {
             System.out.println("Выберите вид сортировки:");
-            printMenu(menuFactory.getMainMenu(MainMenuActions.values()));
+            printMenu(MenuFactory.getMainMenu(MainMenuActions.values()));
             choiceMainMenuAction = readIntFromConsole() - 1;
         } while (choiceMainMenuAction < 0 || choiceMainMenuAction >= SecondMenuActions.values().length);
 
@@ -122,7 +122,7 @@ public class Menu {
 
         do {
             System.out.println("Выберите тип сортировки:");
-            printMenu(menuFactory.getSecondMenu(SecondMenuActions.values()));
+            printMenu(MenuFactory.getSecondMenu(SecondMenuActions.values()));
             choiceSecondMenuAction = readIntFromConsole() - 1;
         } while (choiceSecondMenuAction < 0 || choiceSecondMenuAction >= SecondMenuActions.values().length);
 

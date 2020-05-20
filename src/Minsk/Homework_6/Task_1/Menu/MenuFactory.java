@@ -11,7 +11,7 @@ import static Minsk.Homework_6.Task_1.Menu.Item.MainMenuTextConst.*;
 import static Minsk.Homework_6.Task_1.Menu.Item.SecondMenuTextConst.TEXT_ITEM_SORT_ASCENDING;
 import static Minsk.Homework_6.Task_1.Menu.Item.SecondMenuTextConst.TEXT_ITEM_SORT_DESCENDING;
 
-public class menuFactory {
+public class MenuFactory {
 
     public static List<MenuItem> getMainMenu(MainMenuActions[] mainMenuActions) {
         List<MenuItem> listMenuItems = new LinkedList<>();
@@ -59,6 +59,6 @@ public class menuFactory {
         return null;
     }
 
-    private menuFactory() {
+    private MenuFactory() {
     }
 }
