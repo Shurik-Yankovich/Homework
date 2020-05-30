@@ -1,0 +1,3 @@
+will read
+and write text
+rree
