@@ -1,4 +1,4 @@
-package Minsk.Homeworks_4.Generator;
+package Minsk.Homework_4.Generator;
 
 import java.util.Random;
 

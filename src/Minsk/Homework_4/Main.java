@@ -1,4 +1,4 @@
-package Minsk.Homeworks_4;
+package Minsk.Homework_4;
 
 import java.util.Scanner;
 

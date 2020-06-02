@@ -1,4 +1,4 @@
-package Minsk.Homeworks_5.Organization_Employees;
+package Minsk.Homework_5.Organization_Employees;
 
 public class Accountant extends Employee {
 

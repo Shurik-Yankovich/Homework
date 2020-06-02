@@ -1,4 +1,4 @@
-package Minsk.Homeworks_4.Participants;
+package Minsk.Homework_4.Participants;
 
 public class ParticipantFactory {
 

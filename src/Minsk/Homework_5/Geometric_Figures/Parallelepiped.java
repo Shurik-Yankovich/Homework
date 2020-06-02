@@ -1,4 +1,4 @@
-package Minsk.Homeworks_5.Geometric_Figures;
+package Minsk.Homework_5.Geometric_Figures;
 
 public class Parallelepiped extends Figure {
 

@@ -1,4 +1,4 @@
-package Minsk.Homeworks_5.Car_Catalog;
+package Minsk.Homework_5.Car_Catalog;
 
 public class Car {
 

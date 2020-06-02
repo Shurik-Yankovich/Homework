@@ -1,6 +1,6 @@
-package Minsk.Homeworks_4.Participants;
+package Minsk.Homework_4.Participants;
 
-import Minsk.Homeworks_4.Generator.NumberGenerator;
+import Minsk.Homework_4.Generator.NumberGenerator;
 
 public class Participant {
 

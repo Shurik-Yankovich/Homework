@@ -1,8 +1,8 @@
-package Minsk.Homeworks_4;
+package Minsk.Homework_4;
 
-import Minsk.Homeworks_4.Generator.NumberGenerator;
-import Minsk.Homeworks_4.Participants.Participant;
-import Minsk.Homeworks_4.Participants.ParticipantFactory;
+import Minsk.Homework_4.Generator.NumberGenerator;
+import Minsk.Homework_4.Participants.Participant;
+import Minsk.Homework_4.Participants.ParticipantFactory;
 
 public class Sportloto {
 
