@@ -1,23 +1,13 @@
 package Minsk.Homework_9.trucks;
 
-public class SmallTruck implements Truck {
+import java.util.concurrent.Semaphore;
 
-    private final int carryingCapacity;
-    private String name;
+public class SmallTruck extends Truck{
 
-    public SmallTruck(int numberTruck) {
-        carryingCapacity = 1;
-        name = String.format("Маленький грузовик №%d", numberTruck);
-    }
+    private static final int CARRYING_CAPACITY_FOR_SMALL_TRUCK = 1;
 
-    @Override
-    public int getCarryingCapacity() {
-        return carryingCapacity;
-    }
-
-    @Override
-    public String getName() {
-        return name;
+    public SmallTruck(int numberTruck, Semaphore storageForLoading, Semaphore storageForUnloading) {
+        super(CARRYING_CAPACITY_FOR_SMALL_TRUCK, String.format("Маленький грузовик №%d", numberTruck), storageForLoading, storageForUnloading);
     }
 
 }
