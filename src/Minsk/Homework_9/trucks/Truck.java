@@ -23,24 +23,34 @@ public class Truck extends Thread {
     @Override
     public void run() {
         try {
-            storageForLoading.acquire();
-            loadTruck();
-            storageForLoading.release();
+            while (true) {
+                storageForLoading.acquire();
+                loadTruck();
+                storageForLoading.release();
 
-            driveToTheStorage();
+                driveToTheStorageForUnloading();
 
-            storageForUnloading.acquire();
-            unloadTruck();
-            storageForUnloading.release();
+                storageForUnloading.acquire();
+                unloadTruck();
+                storageForUnloading.release();
+
+                driveToTheStorageForLoading();
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    private void driveToTheStorage() throws InterruptedException {
+    private void driveToTheStorageForUnloading() throws InterruptedException {
         System.out.println(String.format("%s поехал на разгрузочные склады", name));
         Thread.sleep(TRAVEL_TIME_BETWEEN_STORAGES);
         System.out.println(String.format("%s приехал на разгрузку", name));
+    }
+
+    private void driveToTheStorageForLoading() throws InterruptedException {
+        System.out.println(String.format("%s поехал на склады для загрузки", name));
+        Thread.sleep(TRAVEL_TIME_BETWEEN_STORAGES);
+        System.out.println(String.format("%s приехал на загрузку", name));
     }
 
     private void loadTruck() throws InterruptedException {
